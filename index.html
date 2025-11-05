@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Learning - Cats & Dogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BOTÃO DE TEMA -->
+    <button id="themeToggle" class="theme-btn">🌙</button>
+
+    <header class="navbar">
+        <div class="logo">🐾 Transfer Learning - Cats & Dogs</div>
+        <nav>
+            <a href="#intro">Início</a>
+            <a href="#dataset">Dataset</a>
+            <a href="#modelo">Modelo</a>
+            <a href="#resultados">Resultados</a>
+            <a href="#teste">Teste</a>
+        </nav>
+    </header>
+
+    <!-- INTRO -->
+    <section id="intro" class="section hero">
+        <div class="content">
+            <h1>Transfer Learning para Classificação de Gatos e Cachorros</h1>
+            <p>Este projeto utiliza redes neurais pré-treinadas para classificar imagens de gatos e cachorros com alta precisão.</p>
+            <a href="#dataset" class="btn">Explorar Projeto</a>
+        </div>
+    </section>
+
+    <!-- DATASET -->
+    <section id="dataset" class="section">
+        <h2>📂 Dataset</h2>
+        <p>Utilizamos o dataset <b>Cats vs Dogs</b> da Microsoft contendo milhares de imagens.</p>
+        <img src="https://storage.googleapis.com/kaggle-datasets-images/2477/4259/1b7a76787a0ef6ff616a7e7c2582f16e/dataset-cover.jpg" class="illustration">
+    </section>
+
+    <!-- MODELO -->
+    <section id="modelo" class="section alt">
+        <h2>🧠 Modelo de Transfer Learning</h2>
+        <p>Baseado em VGG16 com novas camadas densas adaptadas para classificar entre gatos e cachorros.</p>
+
+        <div class="diagram">
+            <div class="block">📸 Imagem</div>
+            <div class="arrow">➡️</div>
+            <div class="block">🔍 Extração (VGG16)</div>
+            <div class="arrow">➡️</div>
+            <div class="block">🧩 Camadas Densas</div>
+            <div class="arrow">➡️</div>
+            <div class="block">🐶/🐱 Saída</div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section id="resultados" class="section">
+        <h2>📊 Resultados</h2>
+        <canvas id="chart"></canvas>
+    </section>
+
+    <!-- TESTE -->
+    <section id="teste" class="section alt">
+        <h2>🖼️ Teste o Modelo</h2>
+        <input type="file" id="imgUpload" accept="image/*">
+        <div id="preview"></div>
+        <p id="predicao"></p>
+    </section>
+
+    <footer>
+        © 2025 Projeto IA — Transfer Learning Cats & Dogs
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

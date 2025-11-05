@@ -1,0 +1,157 @@
+/* VARIÁVEIS DE TEMA */
+:root {
+    --bg: #f8f9fa;
+    --text: #222;
+    --card: #ffffff;
+    --nav: #1e3d59;
+    --nav-text: #fff;
+    --accent: #ffcc00;
+    --soft-bg: #f0f0f0;
+}
+
+body.dark {
+    --bg: #10141a;
+    --text: #e4e4e4;
+    --card: #1c212b;
+    --nav: #0d1a26;
+    --nav-text: #d4d4d4;
+    --accent: #ffe066;
+    --soft-bg: #1a1f27;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: all .3s ease;
+}
+
+/* BOTÃO DE TEMA */
+.theme-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    font-size: 28px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    transition: transform .2s;
+    z-index: 999;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+/* NAVBAR */
+.navbar {
+    background: var(--nav);
+    color: var(--nav-text);
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: var(--nav-text);
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=1600&q=80')
+        center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+.btn {
+    background: var(--accent);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.section.alt {
+    background: var(--soft-bg);
+}
+
+.illustration {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* DIAGRAM */
+.diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.block {
+    background: var(--nav);
+    color: var(--nav-text);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+/* TESTE */
+#preview img {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#predicao {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: var(--nav);
+    color: var(--nav-text);
+    text-align: center;
+    padding: 20px;
+}
